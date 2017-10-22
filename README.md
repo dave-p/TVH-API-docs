@@ -1,2 +1,2 @@
 # TVH-API-docs
-Documentation for the TVHeadend HTTP API
+User-created documentation for the TVHeadend HTTP API
