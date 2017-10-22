@@ -5,7 +5,8 @@ This section includes functions to manipulate recorder objects; timers, autorecs
 Lists the text strings, options and defaults used when configuring the DVR capability within TVH (ie Configuration -> Recording). It is only likely to be needed for recreating the existing TVH GUI.
 ## dvr/config/grid
 Lists the configuration sets available for the TVH server together with their options. Configurations are identified by their `name` parameter; the default config has the name blank.
-```{
+```
+{
    "total" : 1,
    "entries" : [
       {
@@ -49,7 +50,8 @@ Lists the configuration sets available for the TVH server together with their op
          "pathname" : "$t$n.$x"
       }
    ]
-}```
+}
+```
 ## dvr/config/create
 Creates a new configuration set. Parameters passed are:
 - configuration name
@@ -191,7 +193,6 @@ Lists recordings which have completed and which are still in the TVH logs.
     ]
  }
 ```
-
 ## dvr/entry/grid_failed
 Lists failed recordings?
 ## dvr/entry/grid_removed
