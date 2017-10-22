@@ -200,7 +200,9 @@ Lists removed recordings?
 ## dvr/entry/create
 ???
 ## dvr/entry/create_by_event
-
+Creates a new one-off timer. Input parameters are:
+- `config_uuid` this is the `uuid` parameter from the output of `dvr/config/grid`
+- `event_id` this is the `eventId` parameter for the event, taken from `epg/events/grid`
 ## dvr/entry/rerecord/toggle
 
 ## dvr/entry/rerecord/deny
