@@ -224,9 +224,54 @@ Deletes a timer. Parameter `uuid` is the `uuid` value from the timer's entry in 
 ## dvr/entry/move/failed
 
 ## dvr/autorec/class
-
+Lists the text strings, options and defaults used when creating or editing a series timer. It is only likely to be needed for recreating the existing TVH GUI.
 ## dvr/autorec/grid
-
+Lists autorecs (series timers).
+```
+{
+   "entries" : [
+      {
+         "record" : 0,
+         "pri" : 6,
+         "channel" : "a931256950c3f8aa5c5416cd36175e13",
+         "content_type" : 0,
+         "retention" : 0,
+         "fulltext" : false,
+         "start_window" : "Any",
+         "serieslink" : "crid://www.five.tv/R5HP0",
+         "config_name" : "4e3a1e13acd2d5a9c129e7b00f6c986e",
+         "maxduration" : 0,
+         "removal" : 0,
+         "start_extra" : 0,
+         "stop_extra" : 0,
+         "maxcount" : 0,
+         "owner" : "xxxxxx",
+         "weekdays" : [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+         ],
+         "uuid" : "f2c30b9757e66567bf2d8ec6de60314c",
+         "creator" : "xxxxxx",
+         "tag" : "",
+         "maxsched" : 0,
+         "comment" : "Created from EPG query",
+         "start" : "Any",
+         "btype" : 0,
+         "brand" : "",
+         "enabled" : true,
+         "season" : "",
+         "minduration" : 0,
+         "title" : "New: Paddington Station 24/7"
+      }, ...
+   ],
+   "total" : 9
+}
+```
 ## dvr/autorec/create
 
 ## dvr/autorec/create_by_series
@@ -236,7 +281,7 @@ Creates a new series timer using CRIDs. Input parameters are:
 
 **NOTE** To delete a series use `idnode/delete`, passing parameter `uuid` from the entry in `dvr/timerec/grid`.
 ## dvr/timerec/class
-
+Lists the text strings, options and defaults used when creating or editing a time-based recording. It is only likely to be needed for recreating the existing TVH GUI.
 ## dvr/timerec/grid
 
 ## dvr/timerec/create
