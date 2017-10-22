@@ -204,15 +204,17 @@ Creates a new one-off timer. Input parameters are:
 - `config_uuid` this is the `uuid` parameter from the output of `dvr/config/grid`
 - `event_id` this is the `eventId` parameter for the event, taken from `epg/events/grid`
 ## dvr/entry/rerecord/toggle
-
+???
 ## dvr/entry/rerecord/deny
-
+???
 ## dvr/entry/rerecord/allow
-
+???
 ## dvr/entry/stop
 
 ## dvr/entry/cancel
+Deletes a timer. Parameter `uuid` is the `uuid` value from the timer's entry in `dvr/entry/grid`.
 
+**NOTE** To delete a series use `idnode/delete`, passing parameter `uuid` from the entry in `dvr/timerec/grid`.
 ## dvr/entry/remove
 
 ## dvr/entry/filemoved
@@ -228,7 +230,11 @@ Creates a new one-off timer. Input parameters are:
 ## dvr/autorec/create
 
 ## dvr/autorec/create_by_series
+Creates a new series timer using CRIDs. Input parameters are:
+- `config_uuid` this is the `uuid` parameter from the output of `dvr/config/grid`
+- `event_id` this is the `eventId` parameter for one event in the series, taken from `epg/events/grid`
 
+**NOTE** To delete a series use `idnode/delete`, passing parameter `uuid` from the entry in `dvr/timerec/grid`.
 ## dvr/timerec/class
 
 ## dvr/timerec/grid
