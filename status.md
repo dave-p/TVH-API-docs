@@ -1,9 +1,45 @@
 # status
 Lists statistics of input sources and connections.
 ## status/connections
-
+Lists currently-connected client devices.
+```
+{
+   "totalCount" : 1,
+   "entries" : [
+      {
+         "id" : 1,
+         "started" : 1508668447,
+         "server_port" : 9982,
+         "server" : "x.x.x.x",
+         "type" : "HTSP",
+         "peer" : "x.x.x.y",
+         "user" : "xxxxxx",
+         "peer_port" : 57496
+      }
+   ]
+}
+```
 ## status/subscriptions
-
+Lists currently-active subscriptions.
+```
+{
+   "entries" : [
+      {
+         "errors" : 0,
+         "title" : "epggrab",
+         "in" : 85222,
+         "total_in" : 25162474,
+         "total_out" : 25162474,
+         "id" : 75,
+         "out" : 85222,
+         "service" : "Silicon Labs Si2168 : DVB-T #0/Sandy/690MHz/Raw PID Subscription",
+         "state" : "Running",
+         "start" : 1508763840
+      }
+   ],
+   "totalCount" : 1
+}
+```
 ## status/inputs
 Lists statistics of input devices.
 
@@ -53,4 +89,7 @@ ec_bit   => Bit Error Count
 ```
 ## status/inputclrstats
 Resets the input counters to zero.
+- `uuid` Not clear what this refers to. More than one uuid can be specified.
 ## connections/cancel
+Disconnects one or more clients.
+- `id` ids of the connections, obtained from status/connections. How are multiple connections specified??
