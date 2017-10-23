@@ -210,19 +210,21 @@ Creates a new one-off timer. Input parameters are:
 ## dvr/entry/rerecord/allow
 ???
 ## dvr/entry/stop
-
+Gracefully stops a running recording. Parameter `uuid` is the `uuid` value from the timer's entry in `dvr/entry/grid`.
 ## dvr/entry/cancel
-Deletes a timer. Parameter `uuid` is the `uuid` value from the timer's entry in `dvr/entry/grid`.
+Deletes a timer or stops a running recording. Parameter `uuid` is the `uuid` value from the timer's entry in `dvr/entry/grid`.
 
 **NOTE** To delete a series use `idnode/delete`, passing parameter `uuid` from the entry in `dvr/timerec/grid`.
 ## dvr/entry/remove
-
+Removes a completed recording from storage? Presumably needs the `uuid` value from `dvr/entry/grid_finished`.
 ## dvr/entry/filemoved
-
+Informs TVH that a recording has been relocated (by external means) within the filesystem.
+- `src` The original full path to the file
+- `dst` The new full path to the file
 ## dvr/entry/move/finished
-
+??
 ## dvr/entry/move/failed
-
+??
 ## dvr/autorec/class
 Lists the text strings, options and defaults used when creating or editing a series timer. It is only likely to be needed for recreating the existing TVH GUI.
 ## dvr/autorec/grid
