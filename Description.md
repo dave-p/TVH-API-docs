@@ -7,7 +7,7 @@ The URL must include a username and password with access permissions to carry ou
 
 The response from TVH follows the HTTP protocol and includes a status indicating successful completion or the nature of any error.
 
-Data is usually returned as JSON, without any CR or LF characters - the examples given have been 'prettified' to make them easier to read.
+Data is usually returned as JSON, without any CR or LF characters - the examples given have been 'prettified' to make them easier to read. Functions which perform an action rather than return data will return an empty JSON object on successful completion.
 ## Code examples
 ### PHP
 This simple example lists some details about upcoming timers, sorted in date order. To work through a PHP-enabled web server, the PHP.INI setting "allow_url_fopen" must be ON.
