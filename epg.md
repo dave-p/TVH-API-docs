@@ -10,7 +10,7 @@ Query the EPG and optionally apply filters. Parameters are:
 - `channelTag` ?
 - `durationMin` Shortest event to be listed (seconds).
 - `durationMax` Longest event to be listed (seconds).
-- `contentType` Integer representing the genre to be listed (where from?).
+- `contentType` Integer representing the genre to be listed - see `epg/content_type/list`.
 - `filter` ??
 - `sort` ??
 - `start` First record to be listed from the database, default is 0.
@@ -54,5 +54,26 @@ Any values which have no data available will be omitted.
 ## epg/events/load
 
 ## epg/brand/list
-
+??
 ## epg/content_type/list
+Lists the Content Type IDs extracted from ETSI EN 300 468 together with their descriptions. The Content Type ID appears in the output of `epg/grid` as "Genre". IDs described as 'Reserved' or 'User Defined' in the specification are given the description of the previous ID instead.
+- `full` If set to 0 (the default) only the broad categories defined by `content_nibble_level_1` in the specification are listed. If set to 1 all categories are listed.
+
+```
+{
+   "entries" : [
+      {
+         "val" : "",
+         "key" : 0
+      },
+      {
+         "val" : "Movie / Drama",
+         "key" : 16
+      },
+      {
+         "key" : 17,
+         "val" : "Detective / Thriller"
+      }, ...
+   ]
+}
+```
