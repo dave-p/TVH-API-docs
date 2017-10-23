@@ -6,38 +6,43 @@ Query the EPG and optionally apply filters. Parameters are:
 - `mode` If set to the string `now` then only events currently playing are listed.
 - `title` A string which must appear in the title to be listed.
 - `fulltext` If set to 1 then the `title` string must match exactly. Default is 0.
-- `channel` Name of the channel to show events from.
+- `channel` Name of the channel to show events from. Must be an exact match to the channel name from `channel/grid`, otherwise strange results are obtained.
 - `channelTag` ?
-- `durationMin` Shortest event to be listed.
-- `durationMax` Longest event to be listed.
+- `durationMin` Shortest event to be listed (seconds).
+- `durationMax` Longest event to be listed (seconds).
 - `contentType` Integer representing the genre to be listed (where from?).
 - `filter` ??
 - `sort` ??
-- `start` First record to be listed, default is 0.
-- `limit` Number of records to list. **Default is 50**.
+- `start` First record to be listed from the database, default is 0.
+- `limit` Number of records to list. **Default is 50** - use a very large number to get all.
+
+Any values which have no data available will be omitted.
+
 ```
 {
    "totalCount" : 18575,
    "entries" : [
       {
-         "widescreen" : 1,
-         "episodeId" : 905306,
-         "start" : 1508893500,
-         "summary" : "Love Run Cold: Danny, Flack, and Lindsay encounter a rapidly-melting crime scene when a model is found dead at an ice-themed promotional party for vodka, apparently stabbed by an icicle. (S3 ...[AD,S]",
-         "channelNumber" : "56",
-         "serieslinkId" : 900760,
-         "stop" : 1508897100,
-         "subtitle" : "Love Run Cold: Danny, Flack, and Lindsay encounter a rapidly-melting crime scene when a model is found dead at an ice-themed promotional party for vodka, apparently stabbed by an icicle. (S3 ...[AD,S]",
-         "episodeUri" : "crid://www.five.tv/V3V34",
+         "serieslinkUri" : "crid://www.channel4.com/M4EI0021031162146302",
+         "serieslinkId" : 510179,
+         "episodeId" : 510180,
+         "episodeUri" : "crid://www.channel4.com/41408/013",
+         "summary" : "Tony Robinson and the Team descend on the bleak landscape of Bodmin Moor to examine a Bronze Age village and a vast, ancient 300m-long stone structure.  [S]",
+         "genre" : [
+            160
+         ],
+         "channelName" : "More 4",
+         "title" : "Time Team",
+         "start" : 1508760600,
          "subtitled" : 1,
-         "channelUuid" : "c764464e95df34cff2cb37ce1c3eafe7",
-         "audiodesc" : 1,
-         "channelName" : "5USA+1",
-         "serieslinkUri" : "crid://www.five.tv/R38IU",
-         "eventId" : 905390,
-         "nextEventId" : 905391,
-         "title" : "CSI: New York"
-      }
+         "channelUuid" : "e1b1de65605dc4e13bac6d4478e66a44",
+         "eventId" : 510178,
+         "nextEventId" : 510181,
+         "widescreen" : 1,
+         "stop" : 1508764500,
+         "subtitle" : "Tony Robinson and the Team descend on the bleak landscape of Bodmin Moor to examine a Bronze Age village and a vast, ancient 300m-long stone structure.  [S]",
+         "channelNumber" : "14"
+      }, ...
    ]
 }
 ```
