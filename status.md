@@ -34,6 +34,23 @@ For DVB-T tuners at least, the signal and SNR values are only non-zero while TVH
    ]
 }
 ```
+The meaning of the statistics is below. Not all input sources provide all of the values.
+```
+subs     => Subscribers
+weight   => Weight
+bps      => Bandwidth (bits/second)
+ber      => Bit Error Rate
+unc      => Uncorrected Blocks
+te       => Transport Errors
+cc       => Continuity Errors
+signal   => Signal Strength (dBm)
+snr      => Signal/Noise Ratio (dB0
+stream   => Stream
+ec_block => Block Error Count
+tc_bit   => Total Bit Error Count
+tc_block => Total Block Error Count
+ec_bit   => Bit Error Count
+```
 ## status/inputclrstats
-
+Resets the input counters to zero.
 ## connections/cancel
