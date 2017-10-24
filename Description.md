@@ -9,6 +9,10 @@ The response from TVH follows the HTTP protocol and includes a status indicating
 
 Data is usually returned as JSON, without any CR or LF characters - the examples given have been 'prettified' to make them easier to read. Functions which perform an action rather than return data will return an empty JSON object on successful completion.
 ## Code examples
+### curl
+Parameters passed to TVH in the URL must be URI-encoded.
+`curl 'http://user:pass@localhost:9981/api/epg/events/grid?limit=999&channel=BBC%20ONE'`
+If `http_root` has been set for the server, its value must be included in the URL before the /api.
 ### PHP
 This simple example lists some details about upcoming timers, sorted in date order. To work through a PHP-enabled web server, the PHP.INI setting "allow_url_fopen" must be ON.
 ```
@@ -24,15 +28,10 @@ foreach($timers as $t) {
 
 function get_timers() {
   global $urlp;
-  $url = "$urlp/api/dvr/entry/grid_upcoming";
+  $url = "$urlp/api/dvr/entry/grid_upcoming?sort=start";
   $json = file_get_contents($url);
   $j = json_decode($json, true);
   $ret = &$j["entries"];
-  usort($ret, "sort_timers");
   return $ret;
-}
-
-function sort_timers($a, $b) {
-  return ($a["start"] - $b["start"]);
 }
 ```
