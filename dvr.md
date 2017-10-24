@@ -65,7 +65,7 @@ Lists the text strings, options and defaults used when editing an upcoming recor
 Lists all of the recordings that TVH knows about, ie it combines the output of `grid_upcoming`, `grid_finished`, `grid_failed` and `grid_removed`. Use the `status` parameter to tell them apart.
 - `start` First entry to include. Default is the first.
 - `limit` Number of entries to include. **Default is 50** - use a large number to get all.
-- `filter` A JSON object describing the filter(s) to be applied.
+- `filter` A JSON object describing the filter(s) to be applied. See [Grid Filters](Description.md#grid-filters) for syntax.
 - `sort` Name of the field to sort the records by.
 - `dir` if `sort` is specified then `dir=desc` produces a reverse sort.
 ## dvr/entry/grid_upcoming
