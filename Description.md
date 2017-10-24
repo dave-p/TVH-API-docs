@@ -11,8 +11,10 @@ Data is usually returned as JSON, without any CR or LF characters - the examples
 ## Code examples
 ### curl
 Parameters passed to TVH in the URL must be URI-encoded.
+
 `curl 'http://user:pass@localhost:9981/api/epg/events/grid?limit=999&channel=BBC%20ONE'`
-If `http_root` has been set for the server, its value must be included in the URL before the /api.
+
+To make the output more human-readable, pipe it through json_pp (included in the perl package on many distributions).
 ### PHP
 This simple example lists some details about upcoming timers, sorted in date order. To work through a PHP-enabled web server, the PHP.INI setting "allow_url_fopen" must be ON.
 ```
