@@ -6,7 +6,7 @@ Query the EPG and optionally apply filters. Parameters are:
 - `mode` If set to the string `now` then only events currently playing are listed.
 - `title` A string which must appear in the title to be listed.
 - `fulltext` If set to 1 then the `title` string must match exactly. Default is 0.
-- `channel` Name of the channel to show events from. Must be an exact match to the channel name from `channel/grid`, otherwise strange results are obtained.
+- `channel` The channel to show events from, specified either by channel name or uuid. Must be an exact match to the data from `channel/list`, otherwise all channels are returned.
 - `channelTag` ?
 - `durationMin` Shortest event to be listed (seconds).
 - `durationMax` Longest event to be listed (seconds).
