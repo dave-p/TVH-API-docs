@@ -12,7 +12,8 @@ Query the EPG and optionally apply filters. Parameters are:
 - `durationMax` Longest event to be listed (seconds).
 - `contentType` Integer representing the genre to be listed - see `epg/content_type/list`.
 - `filter` ??
-- `sort` ??
+- `sort` The key to be sorted by. Default is to sort by 'start'.
+- `dir` If `sort` is specified, setting 'dir' to 'desc' reverses the sort order  
 - `start` First record to be listed from the database, default is 0.
 - `limit` Number of records to list. **Default is 50** - use a very large number to get all.
 
