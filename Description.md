@@ -1,5 +1,5 @@
 # API Description
-TVHeadend provides the API using the HTTP protocol, by default via port 9981 though this can be changed in the TVH config. The GET method is used, with parameters passed on the URL.
+TVHeadend provides the API using the HTTP protocol, by default via port 9981 though this can be changed in the TVH config. Both the GET and POST methods may be used.
 
 The URL must include a username and password with access permissions to carry out the requested task. If TVHeadend has been started with the '--http_root' qualifier, the HTTP root must be included in the URL, thus eg
 
@@ -8,11 +8,29 @@ The URL must include a username and password with access permissions to carry ou
 The response from TVH follows the HTTP protocol and includes a status indicating successful completion or the nature of any error.
 
 Data is usually returned as JSON, without any CR or LF characters - the examples given have been 'prettified' to make them easier to read. Functions which perform an action rather than return data will return an empty JSON object on successful completion.
+
+## Grid filters
+API calls which end in `/grid` can apply a filter to their output using a JSON object. The syntax is:
+```
+filter=[
+            {
+                "field" : "<fieldname>"
+                "type"  : "string|numeric|boolean"
+                "value" : "<value>"
+                "comparison" : "gt|lt|eq"
+             }, ...
+        ]
+```
+The "comparison" field is only used with numeric data; booleans must match exactly while for strings a regular expression match is used.
 ## Code examples
 ### curl
-Parameters passed to TVH in the URL must be URI-encoded.
+Parameters passed to TVH using the GET method must be URI-encoded:
 
 `curl 'http://user:pass@localhost:9981/api/epg/events/grid?limit=999&channel=BBC%20ONE'`
+
+Alternatively use the POST Method:
+
+`curl --data 'limit=999&channel=BBC ONE' 'http://user:pass@localhost:9981/api/epg/events/grid'`
 
 To make the output more human-readable, pipe it through json_pp (included in the perl package on many distributions).
 ### PHP
