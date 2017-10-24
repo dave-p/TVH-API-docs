@@ -89,7 +89,7 @@ ec_bit   => Bit Error Count
 ```
 ## status/inputclrstats
 Resets the input counters to zero.
-- `uuid` Not clear what this refers to. More than one uuid can be specified.
+- `uuid` The uuid of the input device from `status/inputs`. More than one uuid can be specified - syntax?
 ## connections/cancel
 Disconnects one or more clients.
 - `id` ids of the connections, obtained from status/connections. How are multiple connections specified??
