@@ -63,8 +63,13 @@ Lists the text strings, options and defaults used when editing an upcoming recor
 
 ## dvr/entry/grid
 Lists all of the recordings that TVH knows about, ie it combines the output of `grid_upcoming`, `grid_finished`, `grid_failed` and `grid_removed`. Use the `status` parameter to tell them apart.
+- `start` First entry to include. Default is the first.
+- `limit` Number of entries to include. **Default is 50** - use a large number to get all.
+- `filter` ??
+- `sort` Name of the field to sort the records by.
+- `dir` if `sort` is specified then `dir=desc` produces a reverse sort.
 ## dvr/entry/grid_upcoming
-Lists all of the currently-scheduled recordings.
+Lists all of the currently-scheduled recordings. Parameters are the same as for `dvr/entry/grid`.
 ```
 {
    "total" : 6,
@@ -129,7 +134,7 @@ Lists all of the currently-scheduled recordings.
 }
 ```
 ## dvr/entry/grid_finished
-Lists recordings which have completed and which are still in the TVH logs.
+Lists recordings which have completed and which are still in the TVH logs. Parameters are the same as for `dvr/entry/grid`.
 ```
 {
    "total" : 37,
@@ -194,9 +199,9 @@ Lists recordings which have completed and which are still in the TVH logs.
  }
 ```
 ## dvr/entry/grid_failed
-Lists failed recordings?
+Lists failed recordings? Parameters are the same as for `dvr/entry/grid`.
 ## dvr/entry/grid_removed
-Lists removed recordings?
+Lists removed recordings? Parameters are the same as for `dvr/entry/grid`.
 ## dvr/entry/create
 ???
 ## dvr/entry/create_by_event
@@ -228,7 +233,7 @@ Informs TVH that a recording has been relocated (by external means) within the f
 ## dvr/autorec/class
 Lists the text strings, options and defaults used when creating or editing a series timer. It is only likely to be needed for recreating the existing TVH GUI.
 ## dvr/autorec/grid
-Lists autorecs (series timers).
+Lists autorecs (series timers). Parameters are the same as for `dvr/entry/grid`.
 ```
 {
    "entries" : [
@@ -285,5 +290,5 @@ Creates a new series timer using CRIDs. Input parameters are:
 ## dvr/timerec/class
 Lists the text strings, options and defaults used when creating or editing a time-based recording. It is only likely to be needed for recreating the existing TVH GUI.
 ## dvr/timerec/grid
-
+Lists time-based recordings. Parameters are the same as for `dvr/entry/grid`.
 ## dvr/timerec/create
