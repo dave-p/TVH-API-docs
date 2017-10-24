@@ -11,13 +11,13 @@ Query the EPG and optionally apply filters. Parameters are:
 - `durationMin` Shortest event to be listed (seconds).
 - `durationMax` Longest event to be listed (seconds).
 - `contentType` Integer representing the genre to be listed - see `epg/content_type/list`.
-- `filter` ??
+- `filter` A JSON object describing the filter(s) to be applied. See [Grid Filters](Description.md#grid-filters) for the syntax.
 - `sort` The key to be sorted by. Default is to sort by 'start'.
 - `dir` If `sort` is specified, setting 'dir' to 'desc' reverses the sort order  
 - `start` First record to be listed from the database, default is 0.
 - `limit` Number of records to list. **Default is 50** - use a very large number to get all.
 
-Any values which have no data available will be omitted.
+EPG sources differ in the information which they provide. Any items which have no data available will be omitted.
 
 ```
 {
