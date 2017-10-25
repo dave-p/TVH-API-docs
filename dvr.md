@@ -198,7 +198,21 @@ Lists failed recordings? See [Grid Parameters](Description.md#grid-parameters) f
 ## dvr/entry/grid_removed
 Lists removed recordings? See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ## dvr/entry/create
-???
+Creates a new epg-derived timer from a JSON object.
+
+-`conf` The JSON object describing the timer. Items not specified are derived from the default profile of the user. An example of the minimum useful JSON is shown below.
+```
+{
+   "start":1509397200,
+   "stop":1509400800,
+   "channelname":"Channel 5",
+   "title":{
+      "eng":"Paddington Station 24/7"
+   },
+   "subtitle":{"eng":"More real-life dramas..."}
+}
+```
+The function returns the uuid of the created timer on success.
 ## dvr/entry/create_by_event
 Creates a new one-off timer. Input parameters are:
 - `config_uuid` this is the `uuid` parameter from the output of `dvr/config/grid`
