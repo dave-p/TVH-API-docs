@@ -9,8 +9,15 @@ The response from TVH follows the HTTP protocol and includes a status indicating
 
 Data is usually returned as JSON, without any CR or LF characters - the examples given have been 'prettified' to make them easier to read. Functions which perform an action rather than return data will return an empty JSON object on successful completion.
 
-## Grid filters
-API calls which end in `/grid` can apply a filter to their output using a JSON object. The syntax is:
+## Grid parameters
+API calls which end in `/grid`, with the exception of `epg/event/grid`, have a common set of parameters:
+- `start` First entry to include. Default is the first.
+- `limit` Number of entries to include. **Default is 50** - use a large number to get all.
+- `filter` A JSON object describing the filter(s) to be applied. See [Grid Filters](Description.md#grid-filters) below for syntax.
+- `sort` Name of the field to sort the records by.
+- `dir` if `sort` is specified then `dir=desc` produces a reverse sort.
+### Grid filters
+A filter can be applied to the output using a JSON object. The syntax is:
 ```
 filter=[
             {
