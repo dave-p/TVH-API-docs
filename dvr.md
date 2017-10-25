@@ -54,22 +54,17 @@ Lists the configuration sets available for the TVH server together with their op
 ```
 ## dvr/config/create
 Creates a new configuration set. Parameters passed are:
-- configuration name
-- parameter set.
-
-The structure of the parameter set is TBD.
+- `name` configuration name
+- `conf` parameter set, passed as a JSON object
 ## dvr/entry/class
 Lists the text strings, options and defaults used when editing an upcoming recording. It is only likely to be needed for recreating the existing TVH GUI.
 
 ## dvr/entry/grid
 Lists all of the recordings that TVH knows about, ie it combines the output of `grid_upcoming`, `grid_finished`, `grid_failed` and `grid_removed`. Use the `status` parameter to tell them apart.
-- `start` First entry to include. Default is the first.
-- `limit` Number of entries to include. **Default is 50** - use a large number to get all.
-- `filter` A JSON object describing the filter(s) to be applied. See [Grid Filters](Description.md#grid-filters) for syntax.
-- `sort` Name of the field to sort the records by.
-- `dir` if `sort` is specified then `dir=desc` produces a reverse sort.
+
+See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ## dvr/entry/grid_upcoming
-Lists all of the currently-scheduled recordings. Parameters are the same as for `dvr/entry/grid`.
+Lists all of the currently-scheduled recordings. See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ```
 {
    "total" : 6,
@@ -134,7 +129,7 @@ Lists all of the currently-scheduled recordings. Parameters are the same as for 
 }
 ```
 ## dvr/entry/grid_finished
-Lists recordings which have completed and which are still in the TVH logs. Parameters are the same as for `dvr/entry/grid`.
+Lists recordings which have completed and which are still in the TVH logs. See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ```
 {
    "total" : 37,
@@ -199,9 +194,9 @@ Lists recordings which have completed and which are still in the TVH logs. Param
  }
 ```
 ## dvr/entry/grid_failed
-Lists failed recordings? Parameters are the same as for `dvr/entry/grid`.
+Lists failed recordings? See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ## dvr/entry/grid_removed
-Lists removed recordings? Parameters are the same as for `dvr/entry/grid`.
+Lists removed recordings? See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ## dvr/entry/create
 ???
 ## dvr/entry/create_by_event
@@ -234,7 +229,7 @@ Informs TVH that a recording has been relocated (by external means) within the f
 ## dvr/autorec/class
 Lists the text strings, options and defaults used when creating or editing a series timer. It is only likely to be needed for recreating the existing TVH GUI.
 ## dvr/autorec/grid
-Lists autorecs (series timers). Parameters are the same as for `dvr/entry/grid`.
+Lists autorecs (series timers). See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ```
 {
    "entries" : [
@@ -291,5 +286,5 @@ Creates a new series timer using CRIDs. Input parameters are:
 ## dvr/timerec/class
 Lists the text strings, options and defaults used when creating or editing a time-based recording. It is only likely to be needed for recreating the existing TVH GUI.
 ## dvr/timerec/grid
-Lists time-based recordings. Parameters are the same as for `dvr/entry/grid`.
+Lists time-based recordings. See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ## dvr/timerec/create
