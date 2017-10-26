@@ -1,7 +1,7 @@
 # epg
 Functions to query the Electronic Program(me) Guide.
 ## epg/events/grid
-Query the EPG and optionally apply filters. Parameters are:
+Query the EPG and optionally apply filters.
 - `lang` ?
 - `mode` If set to the string `now` then only events currently playing are listed.
 - `title` A string which must appear in the title to be listed.
@@ -49,13 +49,21 @@ EPG sources differ in the information which they provide. Any items which have n
 ```
 
 ## epg/events/alternative
+Lists alternative broadcasts of the same event.
+- `eventId` Identifier of the event, eg taken from `epg/events/grid`.
+The function appears to rely on the EPG provider giving details such as episode number. It does not work on UK DVB-T.
 
+This function does not work on TVH versions older than 4.2.4-5 or 4.3-589.
 ## epg/events/related
+Lists alternative broadcasts of the same event.
+- `eventId` Identifier of the event, eg taken from `epg/events/grid`.
+The function appears to rely on the EPG provider giving details such as episode number. It does not work on UK DVB-T.
 
+This function does not work on TVH versions older than 4.2.4-5 or 4.3-589.
 ## epg/events/load
 
 ## epg/brand/list
-??
+A 'Brand' is a commonly-available show, eg "Eastenders". What constitutes a 'Brand' is up to the EPG provider.
 ## epg/content_type/list
 Lists the Content Type IDs extracted from ETSI EN 300 468 together with their descriptions. The Content Type ID appears in the output of `epg/grid` as "Genre". IDs described as 'Reserved' or 'User Defined' in the specification are given the description of the previous ID instead.
 - `full` If set to 0 (the default) only the broad categories defined by `content_nibble_level_1` in the specification are listed. If set to 1 all categories are listed.
