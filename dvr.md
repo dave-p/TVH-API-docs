@@ -213,6 +213,32 @@ Creates a new epg-derived timer from a JSON object.
 }
 ```
 The function returns the uuid of the created timer on success.
+
+It is also possible using this function to add a file created elsewhere into the TVH database as a completed recording. Items needed in the JSON are:
+```
+{
+    "enabled": true,
+    "start": 1509000000,
+    "stop":  1509003600,
+    "channelname": "local file",
+    "title": {
+        "eng": "my title" 
+    },
+    "subtitle": {
+        "eng": "filename: my video" 
+    },
+    "description": {
+        "eng": "my description" 
+    },
+    "comment": "added by tvh_addfile.py",
+    "files": [
+        {
+            "filename": "/full/path/to/videofile.ts" 
+        }
+    ]
+}
+```
+It is important that the start and stop times are in the past, otherwise TVH will try to create a timer to record the event. *(Thanks to "ullix tv" for this information.)*
 ## dvr/entry/create_by_event
 Creates a new one-off timer. Input parameters are:
 - `config_uuid` this is the `uuid` parameter from the output of `dvr/config/grid`
