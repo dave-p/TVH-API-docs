@@ -238,7 +238,7 @@ It is also possible using this function to add a file created elsewhere into the
     ]
 }
 ```
-It is important that the start and stop times are in the past, otherwise TVH will try to create a timer to record the event. *(Thanks to "ullix tv" for this information.)*
+It is important that the start and stop times are in the past, otherwise TVH will try to create a timer to record the event. *(Thanks to "ullix tv" for this information.)* Also note that the ability to add a pre-recorded file is unintended behaviour - see [Caution](Intro.md#caution).
 ## dvr/entry/create_by_event
 Creates a new one-off timer. Input parameters are:
 - `config_uuid` this is the `uuid` parameter from the output of `dvr/config/grid`
