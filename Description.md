@@ -14,7 +14,7 @@ API calls which end in `/grid`, with the exception of `epg/event/grid`, have a c
 - `start` First entry to include. Default is the first.
 - `limit` Number of entries to include. **Default is 50** - use a large number to get all.
 - `filter` A JSON object describing the filter(s) to be applied. See [Grid Filters](Description.md#grid-filters) below for syntax.
-- `sort` Name of the field to sort the records by.
+- `sort` Name of the field to sort the records by. A case-sensitive sort is used.
 - `dir` if `sort` is specified then `dir=desc` produces a reverse sort.
 ### Grid filters
 A filter can be applied to the output using a JSON object. The syntax is:
