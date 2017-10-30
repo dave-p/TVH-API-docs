@@ -3,7 +3,33 @@
 ## mpegts/input/network_list
 
 ## mpegts/network/grid
-
+Lists available networks. The standard parameters listed in [Grid Parameters](Description.md#grid-parameters) may be used.
+```
+{
+   "entries" : [
+      {
+         "localtime" : 0,
+         "num_mux" : 9,
+         "wizard" : false,
+         "ignore_chnum" : false,
+         "num_svc" : 145,
+         "autodiscovery" : 2,
+         "skipinitscan" : false,
+         "bouquet" : false,
+         "sid_chnum" : false,
+         "scanq_length" : 0,
+         "networkname" : "Sandy",
+         "uuid" : "c70bb0e55db15cf44c72a8acb49d5ed7",
+         "charset" : "AUTO",
+         "pnetworkname" : "",
+         "num_chn" : 105,
+         "nid" : 0,
+         "idlescan" : false
+      }
+   ],
+   "total" : 1
+}
+```
 ## mpegts/network/class
 
 ## mpegts/network/builders
