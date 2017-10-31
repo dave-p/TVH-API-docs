@@ -31,9 +31,9 @@ Lists available networks. The standard parameters listed in [Grid Parameters](De
 }
 ```
 ## mpegts/network/class
-
+Lists the text strings, options and defaults used when configuring the DVB capability within TVH (ie Configuration -> DVB Inputs -> Networks). It is only likely to be needed for recreating the existing TVH GUI.
 ## mpegts/network/builders
-
+Lists the text strings, options and defaults used when configuring the DVB capability within TVH (ie Configuration -> DVB Inputs -> Network -> Add). It is only likely to be needed for recreating the existing TVH GUI.
 ## mpegts/network/create
 
 ## mpegts/network/mux_class
@@ -86,7 +86,7 @@ Lists available multiplexes. The standard parameters listed in [Grid Parameters]
 }
 ```
 ## mpegts/mux/class
-
+Lists the text strings, options and defaults used when configuring the DVB capability within TVH (ie Configuration -> DVB Inputs -> Muxes). It is only likely to be needed for recreating the existing TVH GUI.
 ## mpegts/service/grid
 Lists available mpegts services. The standard parameters listed in [Grid Parameters](Description.md#grid-parameters) may be used.
 - `hidemode` The default is to show only services where the multiplex is enabled and the service has been verified. Setting this parameter to `all` also hides services which are not enabled, setting it to `none` shows all services.
@@ -125,13 +125,23 @@ Lists available mpegts services. The standard parameters listed in [Grid Paramet
 }
 ```
 ## mpegts/service/class
-
+Lists the text strings, options and defaults used when configuring the DVB capability within TVH (ie Configuration -> DVB Inputs -> Services). It is only likely to be needed for recreating the existing TVH GUI.
 ## mpegts/mux_sched/class
-
+Lists the text strings, options and defaults used when configuring the DVB capability within TVH (ie Configuration -> DVB Inputs -> Mux Schedulers). It is only likely to be needed for recreating the existing TVH GUI.
 ## mpegts/mux_sched/grid
 
 ## mpegts/mux_sched/create
 
 ## dvb/orbitalpos/list
-
+Lists orbital positions and the satellites occupying them. The list is distributed with tvheadend; satellite reception is not necessary to use this API.
+```
+{
+   "entries" : [
+      {
+         "key" : "177W",
+         "val" : "177W : NSS 9"
+      }, ...
+   ]
+}
+```
 ## dvb/scanfile/list
