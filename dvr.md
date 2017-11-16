@@ -200,7 +200,7 @@ Lists removed recordings? See [Grid Parameters](Description.md#grid-parameters) 
 ## dvr/entry/create
 Creates a new epg-derived timer from a JSON object.
 
--`conf` The JSON object describing the timer. Items not specified are derived from the default profile of the user. An example of the minimum useful JSON is shown below.
+- `conf` The JSON object describing the timer. Items not specified are derived from the default profile of the user. An example of the minimum useful JSON is shown below.
 ```
 {
    "start":1509397200,
