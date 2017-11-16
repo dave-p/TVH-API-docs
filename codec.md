@@ -27,8 +27,8 @@ Lists available codecs and their properties. This is a very verbose list.
 ## codec_profile/create
 Add a new codec profile?
 
-`class` The name of the codec profile.
+- `class` The name of the codec profile.
 
-`conf` A JSON object describing the codec profile.
+- `conf` A JSON object describing the codec profile.
 ## codec_profile/class
 Lists the text strings, options and defaults used when configuring codec profiles?
