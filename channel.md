@@ -50,6 +50,10 @@ Lists the names and uuids of all known channels.
 Creates a new channel.
 
 - `conf` A JSON object containing details of the new channel.
+## channel/rename
+Renames a channel. Only available from version 4.3.652.
+- `from` The current name of the channel.
+- `to` The new name of the channel.
 ## channeltag/class
 Lists the text strings, options and defaults used when configuring channels within TVH (ie Configuration -> Channel/EPG -> Channel Tags -> Add). It is only likely to be needed for recreating the existing TVH GUI.
 ## channeltag/grid
