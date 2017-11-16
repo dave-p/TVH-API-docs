@@ -46,5 +46,5 @@ Lists details of bouquets. For details of the parameters and selection criteria 
 ## bouquet/scan
 Scan one or more bouquets to find their channels.
 
-`uuid` uuid(s) of bouquet(s) to scan.
+- `uuid` uuid(s) of bouquet(s) to scan.
 ## bouquet/detach
