@@ -1,7 +1,7 @@
 # channel
 Functions to query and manipulate the list of channels.
 
-A TVH user can only see via the API those channels to which access has been allowed. However a user with ADMIN privilege can use the parameter `all=1` to see details of every channel, channeltag and category even if they do not have access to them.
+A TVH user can only see via the API those channels which have been enabled and to which access has been allowed. However a user with ADMIN privilege can use the parameter `all=1` to see details of every channel, channeltag and category even if they do not have access to them.
 
 ## channel/class
 Lists the text strings, options and defaults used when configuring channels within TVH (ie Configuration -> Channel/EPG -> Channel -> Add). It is only likely to be needed for recreating the existing TVH GUI.
