@@ -43,8 +43,6 @@ To make the output more human-readable, pipe it through json_pp (included in the
 ### PHP
 This simple example lists some details about upcoming timers, sorted in date order. To work through a PHP-enabled web server, the PHP.INI setting "allow_url_fopen" must be ON.
 ```
-$urlp = 'http://admin:admin@localhost:9981;'
-
 $timers = get_timers();
 foreach($timers as $t) {
     $start = strftime("%H:%M", $t["start"]);
@@ -54,8 +52,7 @@ foreach($timers as $t) {
 }
 
 function get_timers() {
-  global $urlp;
-  $url = "$urlp/api/dvr/entry/grid_upcoming?sort=start";
+  $url = "http://admin:admin@localhost:9981/api/dvr/entry/grid_upcoming?sort=start";
   $json = file_get_contents($url);
   $j = json_decode($json, true);
   $ret = &$j["entries"];
