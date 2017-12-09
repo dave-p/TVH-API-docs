@@ -244,11 +244,12 @@ Creates a new one-off timer. Input parameters are:
 - `config_uuid` this is the `uuid` parameter from the output of `dvr/config/grid`
 - `event_id` this is the `eventId` parameter for the event, taken from `epg/events/grid`
 ## dvr/entry/rerecord/toggle
-???
+Set the recording to be re-done if not already set, or cancel a rerecording if one was scheduled. This is the same fuction as Digital Video Recorder -> Finished Recordings -> Re-record.
+- `uuid` the `uuid` of the finished or failed recording, or a JSON object containing an array of uuids.
 ## dvr/entry/rerecord/deny
-???
+Cancel a planned re-recording. See **dvr/entry/rerecord/toggle** above.
 ## dvr/entry/rerecord/allow
-???
+Schedule a re-recording. See **dvr/entry/rerecord/toggle** above.
 ## dvr/entry/stop
 Gracefully stops a running recording. Parameter `uuid` is the `uuid` value from the timer's entry in `dvr/entry/grid`.
 ## dvr/entry/cancel
