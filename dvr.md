@@ -264,9 +264,11 @@ Informs TVH that a recording has been relocated (by external means) within the f
 - `src` The original full path to the file
 - `dst` The new full path to the file
 ## dvr/entry/move/finished
-??
+Move a **finished** recording entry to the "Finished Recordings" category, presumably from "Failed Recordings". The actual file is not moved.
+- `uuid` The `uuid` of the entry, or an array of entries passed as a JSON object.
 ## dvr/entry/move/failed
-??
+Move a **finished** recording entry to the "Failed Recordings" category, presumably from "Finished Recordings". The actual file is not moved.
+- `uuid` The `uuid` of the entry, or an array of entries passed as a JSON object.
 ## dvr/autorec/class
 Lists the text strings, options and defaults used when creating or editing a series timer. It is only likely to be needed for recreating the existing TVH GUI.
 ## dvr/autorec/grid
