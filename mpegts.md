@@ -124,6 +124,12 @@ Lists available mpegts services. The standard parameters listed in [Grid Paramet
    ]
 }
 ```
+`dvb_servicetype` can be used to determine what kind of service is being broadcast. The possibilities are:
+
+- Radio: 0x02
+- SD TV: 0x01, 0x16, 0x17, 0x18, 0x80, 0x96, 0xa8, 0xd3
+- HD TV: 0x11, 0x19 - 0x1e, 0x91, 0xa0, 0xa4, 0xa6
+- UHDTV: 0x1f
 ## mpegts/service/class
 Lists the text strings, options and defaults used when configuring the DVB capability within TVH (ie Configuration -> DVB Inputs -> Services). It is only likely to be needed for recreating the existing TVH GUI.
 ## mpegts/mux_sched/class
