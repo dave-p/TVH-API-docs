@@ -194,9 +194,79 @@ Lists recordings which have completed and which are still in the TVH logs. See [
  }
 ```
 ## dvr/entry/grid_failed
-Lists failed recordings? See [Grid Parameters](Description.md#grid-parameters) for parameter details.
+Lists failed recordings. See [Grid Parameters](Description.md#grid-parameters) for parameter details.
+```{
+   "total" : 1,
+   "entries" : [
+      {
+         "parent" : "",
+         "channelname" : "BBC Four HD",
+         "start" : 1513112400,
+         "stop_real" : 1513116000,
+         "description" : {
+            "eng" : "2/3. Series in which Sam Willis reveals stories of invasion in Britain, including the Barbary Corsaire pirates and the tale of King Louis the Lion, who invaded in the 13th century. [HD] [S]"
+         },
+         "comment" : "Auto recording: Created from EPG query",
+         "disp_title" : "New: Invasion! with Sam Willis",
+         "child" : "",
+         "uri" : "crid://fp.bbc.co.uk/247LP4",
+         "image" : "",
+         "dvb_eid" : 62795,
+         "autorec_caption" : " (Created from EPG query)",
+         "removal" : 0,
+         "url" : "dvrfile/22d9847b550b8fe9e39e01bda2e41777",
+         "owner" : "xxxxxx",
+         "copyright_year" : 0,
+         "playposition" : 0,
+         "filename" : "/video/tvheadend/New: Invasion! with Sam Willis.ts",
+         "start_real" : 1513112355,
+         "start_extra" : 0,
+         "duration" : 3600,
+         "category" : [],
+         "creator" : "xxxxxx",
+         "playcount" : 0,
+         "sched_status" : "completed",
+         "status" : "Too many data errors",
+         "autorec" : "5cf012bf5c78e23d3c89c59c172414cb",
+         "errors" : 0,
+         "norerecord" : false,
+         "broadcast" : 0,
+         "noresched" : true,
+         "keyword" : [],
+         "config_name" : "ffb7136480e16dac47c8e71bd7686537",
+         "disp_subtitle" : "2/3. Series in which Sam Willis reveals stories of invasion in Britain, including the Barbary Corsaire pirates and the tale of King Louis the Lion, who invaded in the 13th century. [HD] [S]",
+         "enabled" : true,
+         "stop_extra" : 0,
+         "pri" : 6,
+         "retention" : 0,
+         "subtitle" : {
+            "eng" : "2/3. Series in which Sam Willis reveals stories of invasion in Britain, including the Barbary Corsaire pirates and the tale of King Louis the Lion, who invaded in the 13th century. [HD] [S]"
+         },
+         "disp_description" : "2/3. Series in which Sam Willis reveals stories of invasion in Britain, including the Barbary Corsaire pirates and the tale of King Louis the Lion, who invaded in the 13th century. [HD] [S]",
+         "fileremoved" : 0,
+         "filesize" : 2171129092,
+         "credits" : {},
+         "title" : {
+            "eng" : "New: Invasion! with Sam Willis"
+         },
+         "content_type" : 2,
+         "genre" : [],
+         "errorcode" : 0,
+         "stop" : 1513116000,
+         "channel_icon" : "",
+         "data_errors" : 510410,
+         "timerec" : "",
+         "channel" : "7bd448424af369b19f22511b1ece023c",
+         "uuid" : "22d9847b550b8fe9e39e01bda2e41777",
+         "timerec_caption" : "",
+         "first_aired" : 0,
+         "duplicate" : 0
+      }
+   ]
+}
+```
 ## dvr/entry/grid_removed
-Lists removed recordings? See [Grid Parameters](Description.md#grid-parameters) for parameter details.
+Lists removed recordings. See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ## dvr/entry/create
 Creates a new epg-derived timer from a JSON object.
 
