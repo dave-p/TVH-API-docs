@@ -2,7 +2,7 @@
 This section includes functions to manipulate recorder objects; timers, autorecs and recordings.
 
 ## dvr/config/class
-Lists the text strings, options and defaults used when configuring the DVR capability within TVH (ie Configuration -> Recording). It is only likely to be needed for recreating the existing TVH GUI.
+Lists the text strings, options and defaults used when configuring the DVR capability within TVH (ie Configuration -> Recording). 
 ## dvr/config/grid
 Lists the configuration sets available for the TVH server together with their options. Configurations are identified by their `name` parameter; the default config has the name blank.
 ```
@@ -57,7 +57,7 @@ Creates a new configuration set. Parameters passed are:
 - `name` configuration name
 - `conf` parameter set, passed as a JSON object
 ## dvr/entry/class
-Lists the text strings, options and defaults used when editing an upcoming recording. It is only likely to be needed for recreating the existing TVH GUI.
+Lists the text strings, options and defaults used when editing an upcoming recording.
 
 ## dvr/entry/grid
 Lists all of the recordings that TVH knows about, ie it combines the output of `grid_upcoming`, `grid_finished`, `grid_failed` and `grid_removed`. Use the `status` parameter to tell them apart.
@@ -267,6 +267,8 @@ Lists failed recordings. See [Grid Parameters](Description.md#grid-parameters) f
 ```
 ## dvr/entry/grid_removed
 Lists removed recordings. See [Grid Parameters](Description.md#grid-parameters) for parameter details.
+
+If TVH is configured to delete the log record when a recording is deleted this function will always return nothing.
 ## dvr/entry/create
 Creates a new epg-derived timer from a JSON object.
 
@@ -321,14 +323,16 @@ Cancel a planned re-recording. See **dvr/entry/rerecord/toggle** above.
 ## dvr/entry/rerecord/allow
 Schedule a re-recording. See **dvr/entry/rerecord/toggle** above.
 ## dvr/entry/stop
-Gracefully stops a running recording. Parameter `uuid` is the `uuid` value from the timer's entry in `dvr/entry/grid`.
+Gracefully stops a running recording.
+- `uuid` The `uuid` value from the timer's entry in `dvr/entry/grid`.
 ## dvr/entry/cancel
 Deletes a timer or stops a running recording.
 - `uuid` The `uuid` value from the timer's entry in `dvr/entry/grid`.
 
 **NOTE** To delete a series use `idnode/delete`, passing parameter `uuid` from the entry in `dvr/timerec/grid`.
 ## dvr/entry/remove
-Removes a completed recording from storage? Presumably needs the `uuid` value from `dvr/entry/grid_finished`.
+Removes a completed recording from storage.
+- `uuid` The recording's `uuid` value from `dvr/entry/grid_finished`.
 ## dvr/entry/filemoved
 Informs TVH that a recording has been relocated (by external means) within the filesystem.
 - `src` The original full path to the file
@@ -340,7 +344,7 @@ Move a **finished** recording entry to the "Finished Recordings" category, presu
 Move a **finished** recording entry to the "Failed Recordings" category, presumably from "Finished Recordings". The actual file is not moved.
 - `uuid` The `uuid` of the entry, or an array of entries passed as a JSON object.
 ## dvr/autorec/class
-Lists the text strings, options and defaults used when creating or editing a series timer. It is only likely to be needed for recreating the existing TVH GUI.
+Lists the text strings, options and defaults used when creating or editing a series timer.
 ## dvr/autorec/grid
 Lists autorecs (series timers). See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ```
@@ -397,7 +401,7 @@ Creates a new series timer using CRIDs. Input parameters are:
 
 **NOTE** To delete a series use `idnode/delete`, passing parameter `uuid` from the entry in `dvr/timerec/grid`.
 ## dvr/timerec/class
-Lists the text strings, options and defaults used when creating or editing a time-based recording. It is only likely to be needed for recreating the existing TVH GUI.
+Lists the text strings, options and defaults used when creating or editing a time-based recording.
 ## dvr/timerec/grid
 Lists time-based recordings. See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ## dvr/timerec/create
