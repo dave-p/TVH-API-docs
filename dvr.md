@@ -195,6 +195,8 @@ Lists recordings which have completed and which are still in the TVH logs. See [
 ```
 ## dvr/entry/grid_failed
 Lists failed recordings. See [Grid Parameters](Description.md#grid-parameters) for parameter details.
+
+If you merge the 'failed' and 'completed' recordings into a single list, the only way to tell which list the entries originally came from is by using the `status` field.
 ```{
    "total" : 1,
    "entries" : [
@@ -393,7 +395,9 @@ Lists autorecs (series timers). See [Grid Parameters](Description.md#grid-parame
 }
 ```
 ## dvr/autorec/create
-
+Create a new series timer by specifying search parameters. To create a timer using CRIDs use `dvr/autorec/create_by_series`.
+`conf` A JSON object specifying the selection parameters for the timer.
+`config_uuid` The `uuid` parameter from the output of `dvr/config/grid`. Parameter `config_name` may be passed instead.
 ## dvr/autorec/create_by_series
 Creates a new series timer using CRIDs. Input parameters are:
 - `config_uuid` The `uuid` parameter from the output of `dvr/config/grid`
@@ -405,3 +409,5 @@ Lists the text strings, options and defaults used when creating or editing a tim
 ## dvr/timerec/grid
 Lists time-based recordings. See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ## dvr/timerec/create
+Create a new time-based timer.
+`conf` A JSON object specifying the selection parameters for the timer.
