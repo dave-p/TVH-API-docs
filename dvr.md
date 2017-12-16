@@ -396,8 +396,8 @@ Lists autorecs (series timers). See [Grid Parameters](Description.md#grid-parame
 ```
 ## dvr/autorec/create
 Create a new series timer by specifying search parameters. To create a timer using CRIDs use `dvr/autorec/create_by_series`.
-`conf` A JSON object specifying the selection parameters for the timer.
-`config_uuid` The `uuid` parameter from the output of `dvr/config/grid`. Parameter `config_name` may be passed instead.
+- `conf` A JSON object specifying the selection parameters for the timer.
+- `config_uuid` The `uuid` parameter from the output of `dvr/config/grid`. Parameter `config_name` may be passed instead.
 ## dvr/autorec/create_by_series
 Creates a new series timer using CRIDs. Input parameters are:
 - `config_uuid` The `uuid` parameter from the output of `dvr/config/grid`
@@ -410,4 +410,4 @@ Lists the text strings, options and defaults used when creating or editing a tim
 Lists time-based recordings. See [Grid Parameters](Description.md#grid-parameters) for parameter details.
 ## dvr/timerec/create
 Create a new time-based timer.
-`conf` A JSON object specifying the selection parameters for the timer.
+- `conf` A JSON object specifying the selection parameters for the timer.
