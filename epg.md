@@ -16,6 +16,7 @@ Query the EPG and optionally apply filters.
 - `dir` If `sort` is specified, setting 'dir' to 'desc' reverses the sort order  
 - `start` First record to be listed from the database, default is 0.
 - `limit` Number of records to list. **Default is 50** - use a very large number to get all.
+- `new` If set to 1 then only events marked as 'new' will be included. Default is 0. The EPG source must identify 'new' events for this filter to work.
 
 EPG sources differ in the information which they provide. Any items which have no data available will be omitted.
 
