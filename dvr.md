@@ -332,6 +332,10 @@ Deletes a timer or stops a running recording.
 - `uuid` The `uuid` value from the timer's entry in `dvr/entry/grid`.
 
 **NOTE** To delete a series use `idnode/delete`, passing parameter `uuid` from the entry in `dvr/timerec/grid`.
+## dvr/entry/prevrec/toggle, dvr/entry/prevrec/set, dvr/entry/prevrec/unset
+These three functions affect the "previously recorded" status of a timer. If set, either directly or via a call to the toggle function, the timer is marked as completed and the file flagged as deleted. If unset, a new timer is created.
+
+These functions can be used to 'hide' re-runs to prevent them being re-recorded.
 ## dvr/entry/remove
 Removes a completed recording from storage.
 - `uuid` The recording's `uuid` value from `dvr/entry/grid_finished`.
