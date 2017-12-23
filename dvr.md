@@ -317,13 +317,9 @@ It is important that the start and stop times are in the past, otherwise TVH wil
 Creates a new one-off timer. Input parameters are:
 - `config_uuid` this is the `uuid` parameter from the output of `dvr/config/grid`
 - `event_id` this is the `eventId` parameter for the event, taken from `epg/events/grid`
-## dvr/entry/rerecord/toggle
-Set the recording to be re-done if not already set, or cancel a rerecording if one was scheduled. This is the same fuction as Digital Video Recorder -> Finished Recordings -> Re-record.
+## dvr/entry/rerecord/toggle, dvr/entry/rerecord/deny, dvr/entry/rerecord/allow
+These functions provide the same capability as the Re-record button in Digital Video Recorder -> Finished Recordings. "Allow" sets the recording to be re-done, "deny" cancels a scheduled rerecording, "toggle" reverses the rerecord state. 
 - `uuid` the `uuid` of the finished or failed recording, or a JSON object containing an array of uuids.
-## dvr/entry/rerecord/deny
-Cancel a planned re-recording. See **dvr/entry/rerecord/toggle** above.
-## dvr/entry/rerecord/allow
-Schedule a re-recording. See **dvr/entry/rerecord/toggle** above.
 ## dvr/entry/stop
 Gracefully stops a running recording.
 - `uuid` The `uuid` value from the timer's entry in `dvr/entry/grid`.
@@ -335,7 +331,7 @@ Deletes a timer or stops a running recording.
 ## dvr/entry/prevrec/toggle, dvr/entry/prevrec/set, dvr/entry/prevrec/unset
 These three functions affect the "previously recorded" status of a timer. If set, either directly or via a call to the toggle function, the timer is marked as completed and the file flagged as deleted. If unset, a new timer is created.
 
-These functions can be used to 'hide' re-runs to prevent them being re-recorded.
+These functions provide the same capability as the Previously Recorded button in Digital Video Recorder -> Upcoming/Current Recordings. It can be used to 'hide' re-runs to prevent them being re-recorded.
 ## dvr/entry/remove
 Removes a completed recording from storage.
 - `uuid` The recording's `uuid` value from `dvr/entry/grid_finished`.
