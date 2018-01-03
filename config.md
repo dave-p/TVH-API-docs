@@ -12,13 +12,13 @@
 ]
 ```
 ## config/load
-TODO
+Lists the details, descriptions, defaults and current values of the items in the GUI screen Configuration -> General -> Base.
 ## config/save
-TODO
+**Untested.** Presumably updates the server from an object in the format produced by config/load.
 ## tvhlog/config/load
-TODO
+Lists the details, descriptions, defaults and current values of the items in the GUI screen Configuration -> Debugging -> Configuration -> Settings.
 ## tvhlog/config/save
-TODO
+**Untested.** Presumably updates the server from an object in the format produced by tvhlog/config/load.
 ## memoryinfo/class
 Lists the details and descriptions of items in the TVH GUI screen Configuration -> Debugging -> Memory Information Entries.
 ## memoryinfo/grid
