@@ -62,7 +62,37 @@ The function appears to rely on the EPG provider giving details such as episode 
 
 This function does not work on TVH versions older than 4.2.4-5 or 4.3-589.
 ## epg/events/load
+Lists details of specific event(s).
+- `eventId` Identifier of the event, or a JSON array of event Ids.
+```
+{
+   "entries" : [
+      {
+         "serieslinkId" : 261067,
+         "channelUuid" : "e61af00ea8b71683b9a1f41515fa83d3",
+         "title" : "Take Me Out",
+         "nextEventId" : 262992,
+         "widescreen" : 1,
+         "summary" : "Paddy McGuinness presents the dating show. The likely lads include a chocolate factory worker, a city slicker, an oil rig engineer and a gymnast. [S]",
+         "channelNumber" : "113",
+         "channelName" : "ITV2+1",
+         "serieslinkUri" : "crid://www.itv.com/ebs44033",
+         "genre" : [
+            48
+         ],
+         "subtitle" : "Paddy McGuinness presents the dating show. The likely lads include a chocolate factory worker, a city slicker, an oil rig engineer and a gymnast. [S]",
+         "episodeId" : 262718,
+         "episodeUri" : "crid://www.itv.com/1616462450",
+         "eventId" : 262991,
+         "start" : 1515005400,
+         "stop" : 1515009600,
+         "subtitled" : 1
+      }
+   ],
+   "totalCount" : 1
+}
 
+```
 ## epg/brand/list
 A 'Brand' is a commonly-available show, eg "Eastenders". What constitutes a 'Brand' is up to the EPG provider.
 ## epg/content_type/list
