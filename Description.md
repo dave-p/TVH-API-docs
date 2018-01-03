@@ -59,3 +59,4 @@ function get_timers() {
   return $ret;
 }
 ```
+For an example of what can be done with the API in PHP see [https://github.com/dave-p/tvheadend](https://github.com/dave-p/tvheadend).
