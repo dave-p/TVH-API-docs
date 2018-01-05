@@ -36,6 +36,11 @@ Lists details of channels. For details of the parameters and selection criteria 
 ```
 ## channel/list
 Lists the names and uuids of all known channels.
+
+These parameters were added at version 4.3-897:
+
+- `numbers` If non-zero, the LCN appears before the channel name, separated by a space. Default is zero.
+- `sources` If non-zero, the source appears after the channel name, in square brackets and separated by a space. Default is zero.
 ```
 {
    "entries" : [
