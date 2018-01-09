@@ -1,11 +1,11 @@
 # epggrab
 
 ## epggrab/channel/list
-TODO
+**Untested** Lists the EPG grabber channels, ie those appearing in Configuration -> Channel / EPG -> EPG Grabber Channels.
 ## epggrab/channel/class
 Lists the parameters, descriptions, options and defaults for the GUI screen Configuration -> Channel/EPG -> EPG Grabber Channels.
 ## epggrab/channel/grid
-TODO
+**Untested** Gives details of the EPG grabber channels, ie from Configuration -> Channel / EPG -> EPG Grabber Channels.
 ## epggrab/module/list
 List EPG Grabber Modules, as shown in the GUI screen Configuration -> Channel/EPG -> EPG Grabber Modules.
 ```
@@ -20,9 +20,9 @@ List EPG Grabber Modules, as shown in the GUI screen Configuration -> Channel/EP
 }
 ```
 ## epggrab/config/load
-TODO
+Lists the parameters, options, defaults and current settings for the EPG grabber, ie Configuration -> Channel / EPG -> EPG Grabber.
 ## epggrab/config/save
-TODO
+**Untested** Updates the EPG Grabber configuration from an object in the same format as provided by epggrab/config/load.
 ## epggrab/ota/trigger
 Queues a run of the OTA EPG grabber.
 - `trigger` Delay in seconds before the run starts. Minimum is one second, maximum is one week.
