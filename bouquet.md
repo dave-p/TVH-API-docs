@@ -42,9 +42,14 @@ Lists details of bouquets. For details of the parameters and selection criteria 
 }
 ```
 ## bouquet/create
-    
+Create a new bouquet.
+
+- `conf` Object describing the new bouquet. An element `ext_url` is required; presumably in the format of the `source` element in bouquet/grid.
 ## bouquet/scan
 Scan one or more bouquets to find their channels.
 
 - `uuid` uuid(s) of bouquet(s) to scan.
 ## bouquet/detach
+Removes the link from a channel to the bouquet that it is part of.
+
+- `uuid` uuid(s) of channels to detach.
