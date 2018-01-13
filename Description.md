@@ -29,6 +29,9 @@ filter=[
         ]
 ```
 The "comparison" field is only used with numeric data; booleans must match exactly while for strings a regular expression match is used.
+## Load parameters
+API calls which end in `/load` have a common set of parameters:
+- `meta` If > 0 a more complex data structure is output, mostly related to the format of the GUI screen where the information is presented. Default is 0.
 ## Code examples
 ### curl
 Parameters passed to TVH using the GET method must be URI-encoded:
