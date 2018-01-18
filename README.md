@@ -1,5 +1,5 @@
 # TVH-API-docs
-User-created documentation for the TVHeadend HTTP API.
+User-created documentation for the TVHeadend HTTP API. **The up-to-date version of this documentation is now on the [Wiki](https://github.com/dave-p/TVH-API-docs/wiki)**
 
 This document provides information on the HTTP API for TvHeadend. It was written from the source code of the development version 4.3.
 
